@@ -1,0 +1,45 @@
+.input-ingresar{
+    width: 280px;
+    text-align: center;
+    height: 3rem;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.btn-ingresar{
+    width: 280px;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 94.5vh;
+}
+
+.fondo-inputs{
+    background-color: #fff;
+    padding-top: 1.50em;
+    padding-bottom: 1.50em;
+    padding-right: 1.25em;
+    padding-left: 1.25em;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.link{
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+.text{
+    color:#fff;
+}
+
+.link:hover{
+    text-decoration: underline;
+    color:black;
+}

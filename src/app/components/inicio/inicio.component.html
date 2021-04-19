@@ -1,0 +1,23 @@
+<div class="contenedor">
+
+<div class="fondo-inputs">
+<div  *ngIf="error" class="alert alert-danger" role="alert">
+        <strong>Por favor ingrese el PIN</strong>
+      </div> 
+<input [(ngModel)]="pin" [ngClass]="error ? 'form-control is-invalid' : 'form-control'" 
+[ngClass]="pin != '' ? 'form-control is-valid' : 'form-control' "
+
+
+type="text" placeholder="PIN de juego" class=" input-ingresar mb-3">
+<button (click)="ingresar()"class="btn-ingresar btn-principal">Ingresar</button>
+</div>
+</div>
+
+
+<div class="fixed-botoom">
+    <p class="text-center text">
+        Crea tus cuestionarios 
+        <a class="link" href="#">AQUÍ</a>
+    </p> 
+</div>
+
