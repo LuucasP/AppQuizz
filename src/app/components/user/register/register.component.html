@@ -1,1 +1,39 @@
-<p>register works!</p>
+<div class="container ">
+    <div class="row vh-100 justify-content-center align-items-center">
+    <div class="col-6">
+        <div class="card p-5 ">
+        <div class="card-body">
+            <h4 class="mb-4 textos">Registro</h4>
+
+            <form  [formGroup]="registroForm" (ngSubmit)="registro()">
+            
+            <input type="text" formControlName="emailForm" class="form-control textos" placeholder="Ingrese su correo">
+            <span class="text-danger" *ngIf="registroForm.get('emailForm')?.hasError('required') && 
+            registroForm.get('emailForm')?.touched ">El correo es requerido</span>
+            <span class="text-danger" *ngIf="registroForm.get('emailForm')?.hasError('email') &&
+            registroForm.get('emailForm')?.touched">El correo es invalido</span>
+
+            <input type="password" formControlName="password"  class="form-control  mt-3 textos" placeholder="Ingrese su contraseña">
+            <span class="text-danger" *ngIf="registroForm.get('password')?.hasError('required') &&
+            registroForm.get('password')?.touched">La contraseña es requerida</span>
+            <span class="text-danger" *ngIf="registroForm.get('password')?.hasError('minlength') &&
+            registroForm.get('password')?.touched">La contraseña debe tener como mínimo 6 caracteres</span>
+
+            <input type="password" formControlName="repetirPassword"  class="form-control  mt-3 textos" placeholder="Vuelva a ingresar su contraseña">
+            <span class="text-danger" *ngIf="registroForm.get('repetirPassword')?.hasError('required') &&
+            registroForm.get('repetirPassword')?.touched">La contraseña es requerida</span>
+            <span class="text-danger" *ngIf="registroForm.hasError('notSame') &&
+            registroForm.get('repetirPassword')?.touched">Las contraseñas son distintas</span>
+          
+
+            <button type="submit" class="btn btn-primary  mt-3   float-end textos">Registrarse</button>
+          
+        </form>
+
+        </div>
+        </div>
+        
+    </div>
+</div>
+
+</div>
