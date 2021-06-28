@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "quiz-47bb9": {
+      "hosting": {
+        "Quiz": [
+          "quiz-47bb9"
+        ]
+      }
+    }
+  }
+}
